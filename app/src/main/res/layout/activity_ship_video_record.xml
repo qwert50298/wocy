@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ShipVideoRecordListActivity"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    >
+    <include layout="@layout/action_bar"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:id="@+id/empty"
+        android:visibility="gone"
+        />
+    <com.unicom.autoship.ui.pullToRefresh.PullToRefreshLayout
+        android:id="@+id/prl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <include layout="@layout/layout_refresh_head"/>
+
+        <com.unicom.autoship.ui.pullToRefresh.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                ></android.support.v7.widget.RecyclerView>
+        </com.unicom.autoship.ui.pullToRefresh.PullableScrollView>
+
+        <include layout="@layout/layout_load_more"
+            />
+    </com.unicom.autoship.ui.pullToRefresh.PullToRefreshLayout>
+
+</LinearLayout>

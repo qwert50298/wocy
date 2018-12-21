@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingTop="1dp"
+    android:background="@drawable/bottom_bar_shape">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_home"
+        style="@style/BottomBarButton"
+        android:drawableTop="@drawable/bottom_bar_home_selector"
+        android:text="工作"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_boat"
+        style="@style/BottomBarButton"
+        android:drawableTop="@drawable/bottom_bar_map_selector"
+        android:text="船控"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_contact"
+        style="@style/BottomBarButton"
+        android:drawableTop="@drawable/bottom_bar_contact_selector"
+        android:text="通讯录"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_mine"
+        style="@style/BottomBarButton"
+        android:drawableTop="@drawable/bottom_bar_my_selector"
+        android:text="我的"/>
+</android.support.v7.widget.LinearLayoutCompat>

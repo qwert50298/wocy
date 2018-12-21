@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dyzhou="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainDisplayActivity">
+    <RelativeLayout
+        android:id="@+id/realplay_play_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <SurfaceView
+            android:id="@+id/realplay_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="false"
+            android:background="@mipmap/test"
+            />
+        <!--android:background="@android:color/transparent"-->
+        <!--<include layout="@layout/realplay_loading_layout" />
+        &lt;!&ndash;
+                <include layout="@layout/realplay_control_layout" />
+         &ndash;&gt;
+        <include layout="@layout/ez_play_control" />
+        <include layout="@layout/ez_realplay_prompt_layout" />
+
+        <RelativeLayout
+            android:id="@+id/realplay_capture_rl"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/realplay_sv"
+            android:layout_alignLeft="@+id/realplay_sv"
+            android:background="@color/white"
+            android:onClick="onClick"
+            android:padding="1dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/realplay_capture_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/realplay_capture_watermark_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/video_file_watermark"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <include layout="@layout/realplay_full_operate_layout" />
+
+        <ImageView
+            android:id="@+id/realplay_ptz_direction_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/realplay_sv"
+            android:background="@drawable/left_twinkle"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/realplay_full_anim_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuntai_pressed"
+            android:visibility="gone" />-->
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@mipmap/bg_ib_ic_back"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="17dp"
+        />
+    <ImageButton
+        android:id="@+id/ib_capture"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@mipmap/bg_ib_ic_capture"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="102dp"
+        android:background="#F5F5F5"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_toggle"
+        android:layout_width="36dp"
+        android:layout_height="72dp"
+        android:background="@mipmap/bg_iv_ic_auto_on_bg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="147dp"
+        >
+        <ImageView
+            android:id="@+id/iv_off"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:background="@mipmap/bg_iv_ic_auto_off"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            />
+        <ImageView
+            android:id="@+id/iv_on"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:background="@mipmap/bg_iv_ic_auto_on"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            />
+    </RelativeLayout>
+    <!--<ToggleButton
+        android:id="@+id/btn_toggle"
+        android:textOff=""
+        android:text=""
+        android:checked="false"
+        android:textOn=""
+        android:background="@mipmap/bg_iv_ic_auto_on_bg"
+        android:button="@drawable/selector_toggle"
+        android:layout_width="36dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="147dp"
+        />-->
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="108dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="170dp"
+        android:drawableLeft="@mipmap/bg_iv_ship_small"
+        android:gravity="center_vertical"
+        android:text="无人船01"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#5E5E5E"
+        android:textSize="15sp"
+        android:background="#F5F5F5"
+        />
+    <ImageView
+        android:id="@+id/iv_signal"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="285dp"
+        android:src="@mipmap/bg_iv_ic_signal"
+        android:background="#F5F5F5"
+        />
+    <ImageView
+        android:id="@+id/iv_battery"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="328dp"
+        android:src="@mipmap/bg_iv_ic_battery00"
+        android:background="#F5F5F5"
+        />
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_width="66dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="370dp"
+        android:drawableLeft="@mipmap/bg_iv_ic_speed"
+        android:gravity="center_vertical"
+        android:text="80"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#5E5E5E"
+        android:textSize="15sp"
+        android:background="#F5F5F5"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_map"
+        android:layout_width="136dp"
+        android:layout_height="88dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="17dp"
+        >
+
+    </RelativeLayout>
+
+    <com.unicom.autoship.ui.widget.VerticalRangeSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="70dp"
+        android:layout_height="189dp"
+        app:rsb_min="-100"
+        app:rsb_max="100"
+        app:rsb_mode="single"
+        app:rsb_tick_mark_text_array="@array/markArray2"
+        app:rsb_progress_height="2dp"
+        app:rsb_progress_color="#a6c1ee"
+        app:rsb_progress_default_color="@color/rsbColorSeekBarDefault"
+        app:rsb_indicator_height="25dp"
+        app:rsb_indicator_width="80dp"
+
+        app:rsb_indicator_background_color="#a6c1ee"
+        app:rsb_thumb_size="20dp"
+        app:rsb_indicator_margin="3dp"
+        app:rsb_thumb_drawable="@drawable/thumb_gradient"
+        app:rsb_orientation="left"
+        android:layout_gravity="right"
+        android:layout_marginTop="110dp"
+        android:layout_marginRight="37dp"
+        />
+    <com.unicom.autoship.ui.RockerView
+        android:id="@+id/rockerView_right"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_gravity="right|bottom"
+        android:layout_alignParentRight="true"
+        dyzhou:areaBackground="@mipmap/bg_rocker_view_big"
+        dyzhou:rockerBackground="@mipmap/bg_rocker_view_small"
+        dyzhou:rockerRadius="30dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="6dp"
+
+        />
+</FrameLayout>

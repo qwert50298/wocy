@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:dyzhou="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/realplay_page_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+	<include layout="@layout/ezopen_realplay_operate_bar" android:visibility="gone"/>
+	<include layout="@layout/ezopen_realplay_operate_bar2" android:visibility="gone"/>
+
+<!--    <com.videogo.widget.TitleBar
+        android:id="@+id/title_bar_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+
+
+
+    <RelativeLayout
+        android:id="@+id/realplay_play_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/black_bg" >
+
+       <SurfaceView
+           android:id="@+id/realplay_sv"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@android:color/transparent" />
+		<include layout="@layout/realplay_loading_layout" />
+<!--
+		<include layout="@layout/realplay_control_layout" />
+ -->
+
+		<include layout="@layout/ez_realplay_prompt_layout" />
+
+        <RelativeLayout
+            android:id="@+id/realplay_capture_rl"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:onClick="onClick"
+            android:padding="1dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/realplay_capture_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/realplay_capture_watermark_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/video_file_watermark"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <include layout="@layout/realplay_full_operate_layout"
+			android:visibility="gone"
+			/>
+
+		<ImageView
+		    android:id="@+id/realplay_ptz_direction_iv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:layout_alignBottom="@+id/realplay_sv"
+		    android:background="@drawable/left_twinkle"
+		    android:scaleType="fitXY"
+		    android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/realplay_full_anim_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuntai_pressed"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+	<include layout="@layout/ez_play_control" android:visibility="gone"
+		/>
+
+	<include layout="@layout/rl_control_layout" android:visibility="gone"
+		/>
+
+	<com.baidu.mapapi.map.TextureMapView
+		android:id="@+id/rl_map"
+		android:layout_width="136dp"
+		android:layout_height="88dp"
+		android:layout_gravity="right"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="7dp"
+		android:layout_marginTop="7dp">
+
+	</com.baidu.mapapi.map.TextureMapView>
+	<ImageButton
+		android:id="@+id/ib_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/message_back_selector"
+		android:layout_marginLeft="8dp"
+		android:layout_marginTop="8dp"
+		/>
+	<ImageButton
+		android:id="@+id/ib_capture"
+		android:layout_width="36dp"
+		android:layout_height="36dp"
+		android:background="@drawable/play_full_previously_selector"
+		android:onClick="onClick"
+		android:layout_marginLeft="12dp"
+		android:layout_marginTop="68dp"
+
+		/>
+	<Button
+		android:id="@+id/btn_control"
+		android:layout_width="36dp"
+		android:layout_height="36dp"
+		android:gravity="center"
+		android:text="控制"
+		android:textSize="9sp"
+		android:background="@drawable/round_transp_shape"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="108dp"
+		android:textColor="@color/white"
+		/>
+	<TextView
+		android:id="@+id/tv_name"
+		android:layout_width="108dp"
+		android:layout_height="36dp"
+		android:layout_marginTop="6dp"
+		android:drawableLeft="@mipmap/bg_iv_ship_small"
+		android:gravity="center_vertical"
+		android:text="无人船01"
+		android:maxLines="1"
+		android:ellipsize="end"
+		android:textColor="@color/white"
+		android:textSize="15sp"
+		android:layout_gravity="right"
+		android:layout_marginRight="300dp"
+		/>
+	<TextView
+		android:id="@+id/tv_speed"
+		android:layout_width="86dp"
+		android:layout_height="36dp"
+		android:layout_marginTop="6dp"
+		android:drawableLeft="@mipmap/bg_iv_ic_speed"
+		android:gravity="center_vertical|left"
+		android:text="0.00"
+		android:textColor="@color/white"
+		android:textSize="15sp"
+		android:layout_gravity="right"
+		android:layout_marginRight="172dp"
+		/>
+
+	<!--<ImageView
+		android:id="@+id/iv_signal"
+		android:layout_width="36dp"
+		android:layout_height="36dp"
+		android:layout_marginTop="12dp"
+		android:layout_gravity="right"
+		android:layout_marginRight="349dp"
+		android:src="@mipmap/bg_iv_ic_signal"
+		/>-->
+	<ImageView
+		android:id="@+id/iv_battery"
+		android:layout_width="36dp"
+		android:layout_height="36dp"
+		android:layout_marginTop="6dp"
+		android:layout_gravity="right"
+		android:layout_marginRight="269dp"
+		android:src="@mipmap/bg_iv_ic_battery00"
+		/>
+
+</FrameLayout>

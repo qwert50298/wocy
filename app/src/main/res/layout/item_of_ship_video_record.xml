@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:text="巡查船01-2018-08-16"
+        android:textSize="21sp"
+        android:textColor="#5e5e5e"
+        android:gravity="center_vertical|left"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_area"
+        android:text="钱塘江河段"
+        android:textColor="#ff5e5e5e"
+        android:textSize="16sp"
+        android:gravity="center_vertical|left"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="12dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:text="2018.6.7 12:23:31 - 2018.6.7 12:45:22"
+        android:textColor="#ff5e5e5e"
+        android:textSize="16sp"
+        android:gravity="center_vertical|left"
+        android:layout_below="@id/tv_area"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="12dp"
+
+        />
+
+
+    <View
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:background="@mipmap/bg_ic_arrow"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+    />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC"
+        android:layout_below="@id/tv_date"
+        android:layout_marginTop="12dp"
+        />
+</RelativeLayout>

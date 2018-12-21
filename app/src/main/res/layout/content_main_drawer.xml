@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.MainDrawerActivity"
+    tools:showIn="@layout/app_bar_main_drawer">
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.baidu.mapapi.map.MapView>
+
+
+    <Button
+        android:id="@+id/btn_quit"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_quit"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/bg_ib_record_list"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|left"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:paddingLeft="24dp"
+        android:text=""
+        android:textColor="#4397E5"
+        android:textSize="18sp"
+        android:visibility="gone"
+        />
+</RelativeLayout>

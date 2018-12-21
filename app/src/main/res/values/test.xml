@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="test">
+        <item>Liland Parker</item>
+        <item>Stephen Curry</item>
+        <item>Klay Tompson</item>
+        <item>Kevin Durant</item>
+        <item>Antony Davis</item>
+        <item>Paul George</item>
+        <item>Zach LaVine</item>
+        <item>Kawhi Leonard</item>
+        <item>Russell Westbrook</item>
+        <item>Kyrie Irving</item>
+        <item>Nick Young</item>
+        <item>Kobe Bryant</item>
+        <item>Michael Jordan</item>
+        <item>Julius Erving</item>
+        <item>Mr.Dj</item>
+        <item>++Mr.Plus</item>
+        <item>--Mr.Minus</item>
+        <item>$$Mr.Dollars</item>
+    </string-array>
+
+</resources>
